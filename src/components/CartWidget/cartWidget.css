@@ -1,3 +1,45 @@
+.carritoDiv {
+  position: relative; /* Para posicionar el contador */
+  display: inline-block; /* Ajusta el contenedor al contenido */
+  margin: 10px; /* Margen de 10px */
+}
+
+.logoCartDiv {
+  background-color: blanchedalmond; /* Fondo blanco */
+  border-radius: 50%; /* Círculo */
+  border: 1px solid black;
+  width: 60px; /* Tamaño del círculo blanco */
+  height: 60px;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  padding: 5px;
+  cursor: pointer;
+}
+
 .carrito {
-    width: 120px;
+  width: 50px; /* Tamaño del carrito */
+  height: 50px;
+  display: block; /* Asegura que la imagen no tenga márgenes adicionales */
+}
+
+.contador {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: #f38023;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+}
+
+.contador p {
+  margin: 0;
+  font-size: 18px; /* Tamaño del texto */
+  color: #111111;
+  font-weight: bold;
 }
