@@ -4,7 +4,6 @@ import "./App.css";
 
 function App() {
   /*Acá va el código de la aplicación*/
-  const saludo = "Hola Mundo";
 
   return (
     /*Aca va todo el html de la aplicación*/
