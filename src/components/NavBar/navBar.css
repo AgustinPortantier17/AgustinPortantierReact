@@ -37,13 +37,53 @@
 }
 
 .menu li {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 900;
   color: rgb(255, 255, 255);
   margin: 0 15px;
   text-shadow: 2px 2px 2px #000000;
+  position: relative;
 }
+
 .menu li a {
   text-decoration: none;
   color: inherit;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: block;
+  position: relative;
+}
+
+.menu li a:hover {
+  background: rgba(255, 180, 80, 0.2);
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px rgba(255, 180, 80, 0.8);
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: rgb(255, 180, 80);
+  transition: width 0.3s ease;
+}
+
+.menu li a:hover::after {
+  width: 80%;
+}
+
+/* Estilo para el link activo (seleccionado) */
+.menu li a.active {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 180, 80, 0.3) 0%,
+    rgba(255, 150, 50, 0.3) 100%
+  );
+  border-bottom: 3px solid rgb(255, 180, 80);
+  text-shadow: 0 0 15px rgba(255, 180, 80, 1);
 }

@@ -1,15 +1,26 @@
+import "./Item.css";
+import { Link } from "react-router-dom";
+
 const Item = ({ product }) => {
   return (
-    <div>
-      <p>{product.name}</p>
-      <p>Tipo: {product.type}</p>
-      <p>Juego: {product.game}</p>
-      <p>Descrpción: {product.description}</p>
-      <p>Stock: {product.stock}</p>
-      <p>Set: {product.set}</p>
-      <p>Precio: {product.price}</p>
-      <p>{product.image}</p>
-    </div>
+    <li className="productItem">
+      <div className="productImg">
+        <img src={product.image} alt={product.name} />
+      </div>
+      <div className="productInfo">
+        <p className="productName">
+          {product.name} ({product.set})
+        </p>
+        <p className="productDetail">
+          {product.game} - {product.type}
+        </p>
+        <p className="productPrice">Precio: {product.price}</p>
+        <p className="productStock">Stock: {product.stock}</p>
+        <Link to={"/detail/" + product.id} className="productDescripción">
+          Mas Información
+        </Link>
+      </div>
+    </li>
   );
 };
 

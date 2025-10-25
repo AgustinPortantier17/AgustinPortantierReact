@@ -1,29 +1,33 @@
 import logo from "../../assets/img/logo.webp";
 import "./navBar.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navBar">
-      <a href="">
+      <Link to="/">
         <img src={logo} className="logo" />
-      </a>
+      </Link>
 
       <ul className="menu">
         <li>
-          <a href="">Magic: The Gathering </a>
+          <Link to="/category/MTG">Magic: The Gathering</Link>
         </li>
         <li>
-          <a href="">Yu-Gi-Oh</a>
+          <Link to="/category/YGO">Yu-Gi-Oh</Link>
         </li>
         <li>
-          <a href="">Pokemon</a>
+          <Link to="/category/POKEMON">Pokemón</Link>
         </li>
         <li>
-          <a href="">One Piece</a>
+          <Link to="/category/One Piece">One Piece</Link>
         </li>
         <li>
-          <a href="">Flesh And Blood</a>
+          <Link to="/category/FAB">Flesh and Blood </Link>
+        </li>
+        <li>
+          <Link to="/category/Accesorios">Accesorios</Link>
         </li>
       </ul>
 
