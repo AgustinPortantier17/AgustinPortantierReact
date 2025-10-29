@@ -126,19 +126,3 @@
   min-width: 50px;
   text-align: center;
 }
-
-/* Responsive */
-@media (max-width: 968px) {
-  .item-detail-container {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-
-  .item-detail-title {
-    font-size: 1.5rem;
-  }
-
-  .item-detail-price {
-    font-size: 1.5rem;
-  }
-}

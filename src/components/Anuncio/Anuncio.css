@@ -115,10 +115,3 @@
 .anuncioFechas li:last-child {
   margin-bottom: 0;
 }
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .anuncioSection {
-    max-width: 100%;
-  }
-}

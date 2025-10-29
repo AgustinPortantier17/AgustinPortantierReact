@@ -18,10 +18,10 @@ const NavBar = () => {
           <Link to="/category/YGO">Yu-Gi-Oh</Link>
         </li>
         <li>
-          <Link to="/category/POKEMON">Pokemón</Link>
+          <Link to="/category/PKM">Pokemón</Link>
         </li>
         <li>
-          <Link to="/category/One Piece">One Piece</Link>
+          <Link to="/category/OPC">One Piece</Link>
         </li>
         <li>
           <Link to="/category/FAB">Flesh and Blood </Link>
