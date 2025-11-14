@@ -81,6 +81,7 @@ const Cart = () => {
             Total: <span>${totalPrice()}</span>
           </h2>
         </div>
+
         <button onClick={deleteCart} className="cart-clear">
           Limpiar carrito
         </button>

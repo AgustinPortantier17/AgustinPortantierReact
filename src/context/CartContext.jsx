@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import { LuChartNoAxesColumnDecreasing } from "react-icons/lu";
 
 //Creamos nuestro context
 const CartContext = createContext();

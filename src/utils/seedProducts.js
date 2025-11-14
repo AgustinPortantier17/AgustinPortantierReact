@@ -1,3 +1,6 @@
+import db from "../db/db.js";
+import { collection, addDoc } from "firebase/firestore";
+
 const products = [
   // Universes Beyond: Final Fantasy
   {
@@ -803,12 +806,14 @@ const products = [
   },
 ];
 
-const getProducts = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(products);
-    }, 2000);
-  });
+const seedProducts = async () => {
+  try {
+    const productsRef = collection(db, "products");
+
+    products.map(async ({ id, ...dataProduct }) => {
+      await addDoc(productsRef, dataProduct);
+    });
+  } catch (error) {}
 };
 
-export default getProducts;
+seedProducts();
