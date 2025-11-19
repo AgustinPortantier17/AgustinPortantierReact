@@ -14,6 +14,7 @@ const Checkout = () => {
   });
 
   const [orderId, setOrderId] = useState(null);
+  const [purchasedProducts, setPurchasedProducts] = useState([]);
   const { cart, totalPrice, deleteCart } = useContext(CartContext);
 
   const handleChangeInput = (event) => {
@@ -37,6 +38,7 @@ const Checkout = () => {
       const ordersRef = collection(db, "orders");
       const response = await addDoc(ordersRef, order);
       setOrderId(response.id);
+      setPurchasedProducts([...cart]);
       deleteCart();
     } catch (error) {
       console.log("Error al subir la orden: ", error);
@@ -55,6 +57,41 @@ const Checkout = () => {
           <div className="order-details">
             <p className="order-label">Número de orden:</p>
             <p className="order-id">{orderId}</p>
+          </div>
+          <div className="order-summary">
+            <h3>Resumen de tu compra:</h3>
+            <div className="purchased-items">
+              {purchasedProducts.map((product) => (
+                <div key={product.id} className="purchased-item">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="purchased-item-image"
+                  />
+                  <div className="purchased-item-info">
+                    <p className="purchased-item-name">{product.name}</p>
+                    <p className="purchased-item-details">
+                      Cantidad: {product.quantity} x ${product.price}
+                    </p>
+                  </div>
+                  <p className="purchased-item-subtotal">
+                    ${product.price * product.quantity}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="order-total">
+              <p>
+                Total pagado:{" "}
+                <span className="total-amount">
+                  $
+                  {purchasedProducts.reduce(
+                    (acc, product) => acc + product.price * product.quantity,
+                    0
+                  )}
+                </span>
+              </p>
+            </div>
           </div>
           <div className="order-info">
             <p>Se ha enviado un correo de confirmación a:</p>

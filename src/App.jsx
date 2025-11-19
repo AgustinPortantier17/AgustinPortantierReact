@@ -8,10 +8,7 @@ import Checkout from "./components/Checkout/Checkout.jsx";
 import "./App.css";
 
 function App() {
-  /*Acá va el código de la aplicación*/
-
   return (
-    /*Aca va todo el html de la aplicación*/
     <>
       <div className="app">
         <BrowserRouter>

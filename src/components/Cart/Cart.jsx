@@ -2,6 +2,8 @@ import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../context/CartContext";
 import { SyncLoader } from "react-spinners";
 import { Link } from "react-router-dom";
+import CartItem from "../CartItem/CartItem";
+import "../CartItem/CartItem.css";
 import "./Cart.css";
 
 const Cart = () => {
@@ -17,7 +19,6 @@ const Cart = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Componente de loading reutilizable
   const LoadingSpinner = () => (
     <div className="loading-overlay">
       <div className="loading-content">
@@ -53,27 +54,11 @@ const Cart = () => {
       <>
         <div className="cart-items">
           {cart.map((productCart) => (
-            <div key={productCart.id} className="cart-item">
-              <img src={productCart.image} className="cart-item-image" />
-              <div className="cart-item-info">
-                <p className="cart-item-name">{productCart.name}</p>
-                <p className="cart-item-price">
-                  Precio c/u: ${productCart.price}
-                </p>
-                <p className="cart-item-quantity">
-                  Cantidad: {productCart.quantity}
-                </p>
-                <p className="cart-item-subtotal">
-                  Subtotal: ${productCart.price * productCart.quantity}
-                </p>
-                <button
-                  onClick={() => deleteProductById(productCart.id)}
-                  className="cart-item-remove"
-                >
-                  Eliminar
-                </button>
-              </div>
-            </div>
+            <CartItem
+              key={productCart.id}
+              productCart={productCart}
+              deleteProductById={deleteProductById}
+            />
           ))}
         </div>
         <div className="cart-total-section">

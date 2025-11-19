@@ -1,12 +1,14 @@
 import "./ItemDetail.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import ItemCount from "../ItemCount/ItemCount.jsx";
 
 const ItemDetail = ({ product }) => {
   const { addProduct } = useContext(CartContext);
+  const [viewItemCount, setViewItemCount] = useState(true);
 
   const addToCart = (count) => {
+    setViewItemCount(false);
     const newProduct = { ...product, quantity: count };
     addProduct(newProduct);
   };
@@ -26,8 +28,11 @@ const ItemDetail = ({ product }) => {
         <p className="item-detail-set">Set: {product.set}</p>
         <p className="item-detail-description">{product.description}</p>
         <h3 className="item-detail-price">Precio: ${product.price}</h3>
-
-        <ItemCount stock={product.stock} addToCart={addToCart} />
+        {viewItemCount ? (
+          <ItemCount stock={product.stock} addToCart={addToCart} />
+        ) : (
+          <button className="go-to-cart-button">Ir al Carrito</button>
+        )}
       </div>
     </div>
   );

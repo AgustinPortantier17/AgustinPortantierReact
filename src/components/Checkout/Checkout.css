@@ -115,3 +115,91 @@
   box-shadow: 0 4px 12px rgba(255, 180, 80, 0.6);
   transform: scale(1.05);
 }
+
+.order-summary {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, rgb(15, 20, 30), rgb(25, 35, 45));
+  border: 2px solid rgb(37, 102, 114);
+  border-radius: 10px;
+}
+
+.order-summary h3 {
+  color: rgb(255, 180, 80);
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.purchased-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.purchased-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(37, 102, 114, 0.3);
+}
+
+.purchased-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid rgb(37, 102, 114);
+}
+
+.purchased-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.purchased-item-name {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.purchased-item-details {
+  color: rgb(200, 200, 200);
+  font-size: 14px;
+  margin: 0;
+}
+
+.purchased-item-subtotal {
+  color: rgb(255, 180, 80);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.order-total {
+  padding-top: 15px;
+  border-top: 2px solid rgb(37, 102, 114);
+  text-align: right;
+}
+
+.order-total p {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.total-amount {
+  color: rgb(255, 180, 80);
+  font-size: 24px;
+  font-weight: 700;
+}
