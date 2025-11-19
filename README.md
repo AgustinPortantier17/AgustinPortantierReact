@@ -27,4 +27,4 @@ Esta web permite a los usuarios navegar por un catálogo de productos, filtrar p
 
 ## Contacto
 
-[LinkedIn](www.linkedin.com/in/agustin-portantier-629913297)
+[LinkedIn](https://www.linkedin.com/in/agustin-portantier-629913297)
