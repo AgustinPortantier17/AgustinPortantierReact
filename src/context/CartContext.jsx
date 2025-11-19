@@ -1,10 +1,15 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 //Creamos nuestro context
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const cartLocalStorage = JSON.parse(localStorage.getItem("cart-ecommerce"));
+  const [cart, setCart] = useState(cartLocalStorage ? cartLocalStorage : []);
+
+  useEffect(() => {
+    localStorage.setItem("cart-ecommerce", JSON.stringify(cart));
+  }, [cart]);
 
   const addProduct = (newProduct) => {
     const productExist = cart.find(

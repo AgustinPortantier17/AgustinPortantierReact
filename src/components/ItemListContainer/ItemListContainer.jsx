@@ -1,26 +1,43 @@
-import { useState, useEffect } from "react";
-import ItemList from "../ItemList/ItemList.jsx";
-import Anuncio from "../Anuncio/Anuncio.jsx";
-import "./itemListContainer.css";
 import { SyncLoader } from "react-spinners";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "../../firebase/config.js";
+import { useState, useEffect } from "react";
+import ItemList from "../ItemList/ItemList.jsx";
+import Anuncio from "../Anuncio/Anuncio.jsx";
+import db from "../../db/db.js";
+import "./itemListContainer.css";
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState();
+  const [loading, setLoading] = useState(true);
   const { category } = useParams();
   const productsRef = collection(db, "products");
 
   const getProducts = async () => {
+    setLoading(true);
     try {
-      const dataDb = await getDocs(productsRef);
+      const productsRef = collection(db, "products");
+      let productsQuery = productsRef;
+
+      if (category) {
+        productsQuery = query(productsRef, where("category", "==", category));
+      }
+
+      const dataDb = await getDocs(productsQuery);
       const data = dataDb.docs.map((productDb) => {
         return { id: productDb.id, ...productDb.data() };
       });
-    } catch (error) {}
+      setProducts(data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
+
+  useEffect(() => {
+    getProducts();
+  }, [category]);
 
   return (
     <div className="main">
