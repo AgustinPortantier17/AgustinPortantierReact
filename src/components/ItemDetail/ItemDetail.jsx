@@ -1,6 +1,7 @@
 import "./ItemDetail.css";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount.jsx";
 
 const ItemDetail = ({ product }) => {
@@ -31,7 +32,9 @@ const ItemDetail = ({ product }) => {
         {viewItemCount ? (
           <ItemCount stock={product.stock} addToCart={addToCart} />
         ) : (
-          <button className="go-to-cart-button">Ir al Carrito</button>
+          <Link to="/cart" className="go-to-cart-button">
+            Ir al Carrito
+          </Link>
         )}
       </div>
     </div>

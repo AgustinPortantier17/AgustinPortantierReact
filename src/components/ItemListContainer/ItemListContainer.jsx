@@ -31,7 +31,9 @@ const ItemListContainer = ({ greeting }) => {
     } catch (error) {
       console.log(error);
     } finally {
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
     }
   };
 
