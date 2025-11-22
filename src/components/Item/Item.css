@@ -79,6 +79,8 @@
   font-size: 1.3rem;
   font-weight: bold;
   margin: 8px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .productStock {

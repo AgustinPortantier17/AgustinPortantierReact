@@ -129,7 +129,7 @@ const products = [
       "Mazo preconstruido de 100 cartas de El Señor de los Anillos, enfocado en las fuerzas oscuras de Mordor y tokens de orcos.",
     set: "The Lord of the Rings: Tales of Middle-earth",
     stock: 14,
-    price: 11.8,
+    price: 11800,
     image: "/image/The Hosts of Mordor.png",
     category: "MTG",
   },
