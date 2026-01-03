@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList.jsx";
 import Anuncio from "../Anuncio/Anuncio.jsx";
 import db from "../../db/db.js";
-import "./itemListContainer.css";
+import "./ItemListContainer.css";
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);

@@ -1,5 +1,5 @@
 import logo from "../../assets/img/logo.webp";
-import "./navBar.css";
+import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
