@@ -757,12 +757,11 @@ const products = [
     name: "Playmat Dragon Shield The Cinderfin + Protector Playmat",
     type: "Playmat",
     game: "Accesorios",
-    description:
-      "Tapete de juego premium Dragon Shield con diseño exclusivo The Cinderfin. Incluye protector de playmat para mayor durabilidad. Superficie suave y antideslizante ideal para proteger tus cartas durante el juego. Medidas estándar compatibles con todos los juegos de cartas coleccionables.",
+    description: "...",
     set: "Dragon Shield",
     stock: 2,
     price: 2000,
-    image: "/image/Playmat Dragon Shield The Cinderfin + Protector Playmat.jpg",
+    image: "/image/Playmat-Dragon-Shield-The-Cinderfin-Protector-Playmat.jpg",
     category: "Accesorios",
   },
   {
