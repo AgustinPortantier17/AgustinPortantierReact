@@ -85,3 +85,47 @@
   border-bottom: 3px solid rgb(255, 180, 80);
   text-shadow: 0 0 15px rgba(255, 180, 80, 1);
 }
+@media (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 15px;
+  }
+
+  .navBar .logo {
+    width: 100px;
+    height: 80px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .menu li {
+    font-size: 16px;
+    margin: 0 8px;
+  }
+
+  .menu li a {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBar .logo {
+    width: 80px;
+    height: 60px;
+  }
+
+  .menu li {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+
+  .menu li a {
+    padding: 5px 10px;
+  }
+}

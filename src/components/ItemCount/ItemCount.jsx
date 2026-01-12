@@ -17,16 +17,24 @@ const ItemCount = ({ stock, addToCart }) => {
 
   return (
     <div className="item-detail-counter">
-      <button className="button-cantidad" onClick={handleClickRestar}>
+      <button 
+        className="button-cantidad" 
+        onClick={handleClickRestar}
+        aria-label="Disminuir cantidad"
+      >
         -
       </button>
-      <span>{count}</span>
-      <button className="button-cantidad" onClick={handleClickAumentar}>
+      <span aria-label="Cantidad seleccionada">{count}</span>
+      <button 
+        className="button-cantidad" 
+        onClick={handleClickAumentar}
+        aria-label="Aumentar cantidad"
+      >
         +
       </button>
 
       <button className="button-agregar" onClick={() => addToCart(count)}>
-        Agregar al Carrito
+        Agregar al carrito
       </button>
     </div>
   );

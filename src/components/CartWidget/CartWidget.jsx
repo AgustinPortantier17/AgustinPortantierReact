@@ -9,7 +9,7 @@ const CartWidget = () => {
   const cuantity = totalQuantity();
 
   return (
-    <Link to="/cart" className="carritoDiv">
+    <Link to="/cart" className="carritoDiv" aria-label="Ver carrito de compras">
       <div className="logoCartDiv">
         <AiOutlineShoppingCart
           size={35}

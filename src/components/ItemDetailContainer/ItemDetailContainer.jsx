@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
         setNotFound(true);
       }
     } catch (error) {
-      console.log(error);
+      console.error("Error al cargar producto:", error);
       setNotFound(true);
     } finally {
       setTimeout(() => {

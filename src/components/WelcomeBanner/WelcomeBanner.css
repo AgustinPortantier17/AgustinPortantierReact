@@ -1,0 +1,211 @@
+.welcome-banner {
+  width: 100%;
+  height: 380px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border: 3px solid rgb(255, 180, 80);
+  position: relative;
+  background: linear-gradient(135deg, rgb(37, 102, 114) 0%, rgb(15, 20, 30) 50%, rgb(25, 35, 45) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  
+  /* Animación de entrada */
+  animation: fadeInUp 1s ease-out;
+  
+  /* Efecto hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de brillo animado en el fondo */
+.welcome-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 180, 80, 0.1),
+    transparent
+  );
+  animation: shine 3s infinite;
+  pointer-events: none;
+}
+
+.welcome-banner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(255, 180, 80, 0.4);
+}
+
+.welcome-content {
+  text-align: center;
+  padding: 40px;
+  z-index: 2;
+  cursor: default;
+  
+  /* Animación de entrada con delay */
+  animation: fadeIn 1.2s ease-out 0.3s both;
+}
+
+.welcome-content h1 {
+  color: rgb(255, 180, 80);
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  letter-spacing: 2px;
+  
+  /* Animación de pulso sutil */
+  animation: fadeIn 1.5s ease-out 0.5s both, pulse 2s ease-in-out 2s infinite;
+}
+
+.welcome-content p {
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.welcome-categories {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: rgb(235, 185, 47);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.welcome-categories span {
+  white-space: nowrap;
+  display: inline-block;
+  animation: fadeIn 1.8s ease-out 0.8s both;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.welcome-categories span:hover {
+  transform: scale(1.1);
+  color: rgb(255, 200, 100);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .welcome-banner {
+    height: 320px;
+  }
+
+  .welcome-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .welcome-content p {
+    font-size: 1.4rem;
+  }
+
+  .welcome-categories {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-banner {
+    height: 280px;
+    margin-bottom: 30px;
+    border-width: 2px;
+  }
+
+  .welcome-content h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .welcome-categories {
+    font-size: 1rem;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-banner {
+    height: 240px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .welcome-content {
+    padding: 20px;
+  }
+
+  .welcome-content h1 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .welcome-content p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .welcome-categories {
+    font-size: 0.85rem;
+    gap: 8px;
+  }
+  
+  /* Desactivar animaciones complejas en móvil para mejor rendimiento */
+  .welcome-banner::before {
+    animation: none;
+  }
+}

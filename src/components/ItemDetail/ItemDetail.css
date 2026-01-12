@@ -116,3 +116,76 @@
 .go-to-cart-button:focus {
   outline: none;
 }
+@media (max-width: 1024px) {
+  .item-detail-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .item-detail-image {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .item-detail-container {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .item-detail-title {
+    font-size: 1.5rem;
+  }
+
+  .item-detail-game {
+    font-size: 1rem;
+  }
+
+  .item-detail-set {
+    font-size: 0.9rem;
+  }
+
+  .item-detail-description {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+
+  .item-detail-price {
+    font-size: 1.6rem;
+  }
+
+  .go-to-cart-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-detail-container {
+    padding: 15px;
+    margin: 10px 5px;
+  }
+
+  .item-detail-title {
+    font-size: 1.3rem;
+  }
+
+  .item-detail-game {
+    font-size: 0.9rem;
+  }
+
+  .item-detail-description {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .item-detail-price {
+    font-size: 1.4rem;
+  }
+
+  .go-to-cart-button {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}

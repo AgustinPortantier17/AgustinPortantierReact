@@ -27,7 +27,7 @@ const Announcement = () => {
         <h3>¿Quieres practicar? ✨</h3>
         <p>Visítanos para jugar y divertirte</p>
         <ul className="anuncioFechas">
-          <li>Miercoles de Flesh And Blood</li>
+          <li>Miércoles de Flesh and Blood</li>
           <li>Jueves de One Piece Card Game</li>
           <li>Viernes de Yu-Gi-Oh!</li>
           <li>Sábados de Pokémon TCG</li>

@@ -91,3 +91,53 @@
 .button-agregar:active {
   transform: scale(0.98);
 }
+
+@media (max-width: 768px) {
+  .item-detail-counter {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .button-cantidad {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  .item-detail-counter span {
+    height: 40px;
+    font-size: 1.3rem;
+    min-width: 45px;
+  }
+
+  .button-agregar {
+    height: 40px;
+    font-size: 0.9rem;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-detail-counter {
+    padding: 4px;
+  }
+
+  .button-cantidad {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .item-detail-counter span {
+    height: 35px;
+    font-size: 1.2rem;
+    min-width: 40px;
+    padding: 0 10px;
+  }
+
+  .button-agregar {
+    height: 35px;
+    font-size: 0.85rem;
+    padding: 0 12px;
+  }
+}

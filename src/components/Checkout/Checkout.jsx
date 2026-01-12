@@ -41,7 +41,7 @@ const Checkout = () => {
       setPurchasedProducts([...cart]);
       deleteCart();
     } catch (error) {
-      console.log("Error al subir la orden: ", error);
+      console.error("Error al subir la orden:", error);
     }
   };
 

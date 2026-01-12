@@ -17,7 +17,7 @@ const Item = ({ product }) => {
         <p className="productPrice">Precio: ${product.price}</p>
         <p className="productStock">Stock: {product.stock}</p>
         <Link to={"/detail/" + product.id} className="productDescripción">
-          Mas Información
+          Más información
         </Link>
       </div>
     </li>

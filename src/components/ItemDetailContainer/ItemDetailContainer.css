@@ -63,3 +63,45 @@
   box-shadow: 0 4px 12px rgba(255, 180, 80, 0.6);
   transform: scale(1.05);
 }
+@media (max-width: 768px) {
+  .product-not-found {
+    padding: 20px;
+    min-height: 50vh;
+  }
+
+  .not-found-content {
+    padding: 40px 25px;
+  }
+
+  .not-found-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .not-found-content p {
+    font-size: 1.1rem;
+  }
+
+  .back-to-store-button {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-content {
+    padding: 30px 20px;
+  }
+
+  .not-found-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .not-found-content p {
+    font-size: 1rem;
+  }
+
+  .back-to-store-button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}

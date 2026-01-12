@@ -38,7 +38,12 @@ function App() {
               <Route path="/detail/:id" element={<ItemDetailContainer />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
-              <Route path="*" element={<div>404 Not Found</div>} />
+              <Route path="*" element={
+                <div className="not-found-page">
+                  <h1>404 - Página no encontrada</h1>
+                  <p>La página que buscas no existe.</p>
+                </div>
+              } />
             </Routes>
           </CartProvider>
         </BrowserRouter>

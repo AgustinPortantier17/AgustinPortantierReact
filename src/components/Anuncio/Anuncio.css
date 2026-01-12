@@ -115,3 +115,57 @@
 .anuncioFechas li:last-child {
   margin-bottom: 0;
 }
+
+@media (max-width: 1024px) {
+  .anuncioSection {
+    max-width: 100%;
+    margin: 0 auto 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .anuncioSection {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .anuncioInfo {
+    padding: 18px;
+  }
+
+  .anuncioInfo h3 {
+    font-size: 1.1rem;
+  }
+
+  .anuncioInfo p {
+    font-size: 0.9rem;
+  }
+
+  .anuncioFechas li {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .anuncioInfo {
+    padding: 15px;
+  }
+
+  .anuncioInfo h3 {
+    font-size: 1rem;
+  }
+
+  .anuncioInfo p {
+    font-size: 0.85rem;
+  }
+
+  .anuncioFechas {
+    padding: 10px;
+  }
+
+  .anuncioFechas li {
+    font-size: 0.8rem;
+    padding: 7px 9px;
+  }
+}

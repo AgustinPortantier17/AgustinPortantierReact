@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <nav className="navBar">
       <Link to="/">
-        <img src={logo} className="logo" />
+        <img src={logo} className="logo" alt="TCG Masters - Logo" />
       </Link>
 
       <ul className="menu">
@@ -18,7 +18,7 @@ const NavBar = () => {
           <Link to="/category/YGO">Yu-Gi-Oh</Link>
         </li>
         <li>
-          <Link to="/category/PKM">Pokemón</Link>
+          <Link to="/category/PKM">Pokémon</Link>
         </li>
         <li>
           <Link to="/category/OPC">One Piece</Link>

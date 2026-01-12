@@ -23,7 +23,7 @@ const Cart = () => {
     <div className="loading-overlay">
       <div className="loading-content">
         <SyncLoader color="rgb(37, 102, 114)" size={15} />
-        <p>Cargando...</p>
+        <p>Cargando carrito...</p>
       </div>
     </div>
   );
