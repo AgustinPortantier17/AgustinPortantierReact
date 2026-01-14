@@ -4,7 +4,7 @@ import Item from "../Item/Item";
 import "./ProductCarousel.css";
 
 const ProductCarousel = ({ title, products, category }) => {
-  const itemsPerView = 4;
+  const [itemsPerView, setItemsPerView] = useState(4);
   const startIndex = products.length;
   
   const [currentIndex, setCurrentIndex] = useState(startIndex);
@@ -14,6 +14,26 @@ const ProductCarousel = ({ title, products, category }) => {
 
   // Duplicar productos para efecto infinito (3 copias)
   const extendedProducts = [...products, ...products, ...products];
+
+  // Actualizar itemsPerView según el tamaño de la pantalla
+  useEffect(() => {
+    const updateItemsPerView = () => {
+      const width = window.innerWidth;
+      if (width <= 480) {
+        setItemsPerView(1); // Móvil: 1 producto
+      } else if (width <= 768) {
+        setItemsPerView(2); // Tablet pequeña: 2 productos
+      } else if (width <= 1024) {
+        setItemsPerView(3); // Tablet/laptop pequeño: 3 productos
+      } else {
+        setItemsPerView(4); // Desktop: 4 productos
+      }
+    };
+
+    updateItemsPerView();
+    window.addEventListener('resize', updateItemsPerView);
+    return () => window.removeEventListener('resize', updateItemsPerView);
+  }, []);
 
   useEffect(() => {
     // Calcular el ancho de una card incluyendo gap

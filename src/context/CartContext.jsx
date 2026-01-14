@@ -19,16 +19,24 @@ const CartProvider = ({ children }) => {
     if (productExist) {
       const updatedCart = cart.map((productCart) => {
         if (productCart.id === newProduct.id) {
+          const newQuantity = productCart.quantity + newProduct.quantity;
+          // Si la cantidad llega a 0 o menos, eliminar del carrito
+          if (newQuantity <= 0) {
+            return null;
+          }
           return {
             ...productCart,
-            quantity: productCart.quantity + newProduct.quantity,
+            quantity: newQuantity,
           };
         }
         return productCart;
-      });
+      }).filter(Boolean); // Eliminar elementos null
       setCart(updatedCart);
     } else {
-      setCart([...cart, newProduct]);
+      // Solo agregar si la cantidad es positiva
+      if (newProduct.quantity > 0) {
+        setCart([...cart, newProduct]);
+      }
     }
   };
 

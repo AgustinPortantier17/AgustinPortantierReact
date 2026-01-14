@@ -1,6 +1,43 @@
-.item-detail-container {
+.item-detail-wrapper {
   max-width: 1200px;
   margin: 40px auto;
+  padding: 0 20px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgb(37, 102, 114) 0%, rgb(25, 70, 80) 100%);
+  color: white;
+  border: 2px solid rgb(255, 180, 80);
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, rgb(50, 130, 145) 0%, rgb(37, 102, 114) 100%);
+  transform: translateX(-5px);
+  box-shadow: 0 4px 15px rgba(255, 180, 80, 0.5);
+  border-color: rgb(255, 200, 120);
+}
+
+.back-button:active {
+  transform: translateX(-2px);
+}
+
+.item-detail-container {
+  width: 100%;
+  margin: 0;
   padding: 40px;
   background: linear-gradient(135deg, rgb(15, 20, 30) 0%, rgb(25, 35, 45) 100%);
   border: 2px solid rgb(37, 102, 114);
@@ -29,6 +66,10 @@
   gap: 20px;
   min-width: 0;
   overflow: visible;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .item-detail-title {
@@ -117,6 +158,15 @@
   outline: none;
 }
 @media (max-width: 1024px) {
+  .item-detail-wrapper {
+    padding: 0 15px;
+  }
+
+  .back-button {
+    padding: 8px 15px;
+    font-size: 0.95rem;
+  }
+
   .item-detail-container {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -129,9 +179,19 @@
 }
 
 @media (max-width: 768px) {
+  .item-detail-wrapper {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  .back-button {
+    padding: 7px 12px;
+    font-size: 0.9rem;
+  }
+
   .item-detail-container {
     padding: 20px;
-    margin: 20px 10px;
+    margin: 0;
   }
 
   .item-detail-title {
@@ -162,9 +222,25 @@
 }
 
 @media (max-width: 480px) {
+  .item-detail-wrapper {
+    margin: 10px auto;
+    padding: 0 5px;
+  }
+
+  .back-button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    gap: 5px;
+  }
+
+  .back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
   .item-detail-container {
     padding: 15px;
-    margin: 10px 5px;
+    margin: 0;
   }
 
   .item-detail-title {
