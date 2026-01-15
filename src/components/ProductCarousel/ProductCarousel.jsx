@@ -84,8 +84,17 @@ const ProductCarousel = ({ title, products, category }) => {
 
   const translateValue = -(currentIndex * cardWidth);
 
+  const getCarouselClass = () => {
+    if (category === 'PKM') return 'pokemon-carousel';
+    if (category === 'OPC') return 'onepiece-carousel';
+    if (category === 'FAB') return 'fab-carousel';
+    if (category === 'YGO') return 'yugioh-carousel';
+    if (category === 'MTG') return 'mtg-carousel';
+    return '';
+  };
+
   return (
-    <div className="product-carousel">
+    <div className={`product-carousel ${getCarouselClass()}`}>
       <h2 className="carousel-title">{title}</h2>
       <div className="carousel-wrapper">
         <button 

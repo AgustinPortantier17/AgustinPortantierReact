@@ -4,10 +4,10 @@
   margin-bottom: 40px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  border: 3px solid rgb(255, 180, 80);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  border: 3px solid #1E3A8A;
   position: relative;
-  background: linear-gradient(135deg, rgb(37, 102, 114) 0%, rgb(15, 20, 30) 50%, rgb(25, 35, 45) 100%);
+  background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 50%, #60A5FA 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,9 +18,6 @@
   
   /* Animación de entrada */
   animation: fadeInUp 1s ease-out;
-  
-  /* Efecto hover */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efecto de brillo animado en el fondo */
@@ -34,16 +31,11 @@
   background: linear-gradient(
     45deg,
     transparent,
-    rgba(255, 180, 80, 0.1),
+    rgba(96, 165, 250, 0.3),
     transparent
   );
   animation: shine 3s infinite;
   pointer-events: none;
-}
-
-.welcome-banner:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px rgba(255, 180, 80, 0.4);
 }
 
 .welcome-content {
@@ -57,10 +49,10 @@
 }
 
 .welcome-content h1 {
-  color: rgb(255, 180, 80);
+  color: #FFFEF9;
   font-size: 3.5rem;
   margin-bottom: 20px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
   font-weight: bold;
   letter-spacing: 2px;
   
@@ -69,7 +61,7 @@
 }
 
 .welcome-content p {
-  color: white;
+  color: #FFFFFF;
   font-size: 1.6rem;
   margin-bottom: 30px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -80,7 +72,7 @@
   gap: 15px;
   justify-content: center;
   flex-wrap: wrap;
-  color: rgb(235, 185, 47);
+  color: #FF9F43;
   font-size: 1.2rem;
   font-weight: 600;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -95,7 +87,7 @@
 
 .welcome-categories span:hover {
   transform: scale(1.1);
-  color: rgb(255, 200, 100);
+  color: #FFE4A3;
 }
 
 /* Animaciones */

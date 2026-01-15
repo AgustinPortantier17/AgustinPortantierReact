@@ -11,16 +11,19 @@
 .navBar {
   width: 100%;
   height: auto;
-  background-color: rgb(37, 102, 114);
+  background: #1E3A8A;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   box-sizing: border-box;
-
   animation: slideDown 0.8s ease-out forwards;
   transform: translateY(-100%);
   opacity: 0;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .navBar .logo {
@@ -38,9 +41,9 @@
 .menu li {
   font-size: 26px;
   font-weight: 900;
-  color: rgb(255, 255, 255);
+  color: #e2e8f0;
   margin: 0 15px;
-  text-shadow: 2px 2px 2px #000000;
+  text-shadow: none;
   position: relative;
 }
 
@@ -55,9 +58,10 @@
 }
 
 .menu li a:hover {
-  background: rgba(255, 180, 80, 0.2);
+  background: rgba(255, 159, 67, 0.2);
   transform: translateY(-2px);
-  text-shadow: 0 0 10px rgba(255, 180, 80, 0.8);
+  text-shadow: none;
+  color: #FF9F43;
 }
 
 .menu li a::after {
@@ -68,7 +72,7 @@
   transform: translateX(-50%);
   width: 0;
   height: 3px;
-  background: rgb(255, 180, 80);
+  background: #FF9F43;
   transition: width 0.3s ease;
 }
 
@@ -77,13 +81,10 @@
 }
 
 .menu li a.active {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 180, 80, 0.3) 0%,
-    rgba(255, 150, 50, 0.3) 100%
-  );
-  border-bottom: 3px solid rgb(255, 180, 80);
-  text-shadow: 0 0 15px rgba(255, 180, 80, 1);
+  background: rgba(255, 159, 67, 0.25);
+  border-bottom: 3px solid #FF9F43;
+  text-shadow: none;
+  color: #FF9F43;
 }
 @media (max-width: 768px) {
   .navBar {

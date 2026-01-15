@@ -5,12 +5,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: blanchedalmond;
+  background: #FAF7F2;
   overflow-x: hidden;
 }
 
 .app {
-  background-color: blanchedalmond;
+  background: #FAF7F2;
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
